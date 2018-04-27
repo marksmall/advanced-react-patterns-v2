@@ -1,0 +1,94 @@
+Arguments: 
+  /home/msmall/.ndenv/versions/8.9.0/bin/node /home/msmall/.ndenv/versions/8.9.0/bin/yarn start
+
+PATH: 
+  /home/msmall/.ndenv/versions/8.9.0/bin:/home/msmall/.ndenv/libexec:/home/msmall/.ndenv/plugins/node-build/bin:/home/msmall/.ndenv/shims:/opt/ripgrep-0.8.0-x86_64-unknown-linux-musl:/home/msmall/.ndenv/bin:/opt/apache-maven-3.3.3/bin:/opt/gradle-2.8/bin:/home/msmall/bin:/opt/apache-jmeter-2.13/bin:/home/msmall/local/bin:/usr/sbin:/root/bin:/usr/local/bin:/bin:/usr/bin:/usr/games:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "advanced-react-patterns-v2",
+    "version": "1.0.0",
+    "description": "The updated version of my advanced react component patterns course",
+    "keywords": [],
+    "homepage": "http://advanced-react-patterns.netlify.com/",
+    "main": "src/index.js",
+    "dependencies": {
+      "hoist-non-react-statics": "^2.5.0",
+      "react": "^16.3.0",
+      "react-dom": "^16.3.0",
+      "react-router": "^4.2.0",
+      "react-router-dom": "^4.2.2",
+      "react-testing-library": "^2.1.0",
+      "jest-dom": "^1.0.0",
+      "redux": "^3.7.2"
+    },
+    "devDependencies": {
+      "all-contributors-cli": "^4.11.1",
+      "cross-spawn": "^6.0.5",
+      "husky": "^0.14.3",
+      "inquirer": "^5.2.0",
+      "is-ci": "^1.1.0",
+      "node": "^8.11.1",
+      "npm-run-all": "^4.1.2",
+      "react-scripts": "2.0.0-next.b2fd8db8",
+      "replace-in-file": "^3.4.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "test:coverage": "npm run test -- --coverage",
+      "contributors:add": "all-contributors add",
+      "contributors:generate": "all-contributors generate",
+      "setup": "node ./scripts/verify && node ./scripts/install && npm run validate && node ./scripts/autofill-feedback-email.js",
+      "validate": "npm-run-all --parallel build test:coverage",
+      "precommit": "npm run validate"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "development": [
+        "last 2 chrome versions",
+        "last 2 firefox versions",
+        "last 2 edge versions"
+      ],
+      "production": [
+        ">1%",
+        "last 4 versions",
+        "Firefox ESR",
+        "not ie < 11"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 127
+  Command: sh
+  Arguments: -c react-scripts start
+  Directory: /home/msmall/dev/projects/github/advanced-react-patterns-v2
+  Output:
+  
+      at ProcessTermError.MessageError (/home/msmall/.ndenv/versions/8.9.0/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/home/msmall/.ndenv/versions/8.9.0/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/home/msmall/.ndenv/versions/8.9.0/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

@@ -12,6 +12,13 @@ class Toggle extends React.Component {
   // parent Toggle component and the child Candy component more explicit
   // 🐨 You'll need to create three such components here: On, Off, and Button
   // The button will be responsible for rendering the <Switch /> (with the right pros)
+
+  static On = ({on, children}) => (on ? children : null)
+  static Off = ({on, children}) => (on ? null : children)
+  static Button = ({on, toggle, ...props}) => (
+    <Switch on={on} onClick={toggle} {...props} />
+  )
+
   state = {on: false}
   toggle = () =>
     this.setState(
@@ -29,8 +36,12 @@ class Toggle extends React.Component {
     // 2. React.cloneElement: https://reactjs.org/docs/react-api.html#cloneelement
     //
     // 🐨 you'll want to completely replace the code below with the above logic.
-    const {on} = this.state
-    return <Switch on={on} onClick={this.toggle} />
+    return React.Children.map(this.props.children, child =>
+      React.cloneElement(child, {
+        on: this.state.on,
+        toggle: this.toggle,
+      }),
+    )
   }
 }
 
